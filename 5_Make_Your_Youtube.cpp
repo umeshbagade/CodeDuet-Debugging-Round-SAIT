@@ -4,6 +4,8 @@
 // Also there is another class called MyChannels where you can add channels to your list and delete as well
 // You need to make the required changes such that the different operations like printing , += ... works properly
 
+// Following code contains both syntax and logical errors.
+
 #include <iostream>
 #include <string>
 #include <list>
