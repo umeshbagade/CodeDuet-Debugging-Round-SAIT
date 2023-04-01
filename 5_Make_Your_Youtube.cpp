@@ -50,7 +50,8 @@ void operator<<(ostream &COUT, MyCollection &myCollection)
 {
     for (YoutubeChannel ytchannel : myCollection.myChannels)
     {
-        COUT << ytchannel << endl;
+        COUT << ytchannel;
+        COUT<< endl;
     }
 }
 
@@ -60,17 +61,18 @@ int main()
     YoutubeChannel yt1 = YoutubeChannel("TechFusion", 5000);
     YoutubeChannel yt2 = YoutubeChannel("SAIT", 6000);
 
-    cout << yt1 << yt2;
+    cout << yt1;
+    cout << yt2;
     cout << endl;
 
-    MyCollection myCollection;
-    myCollection += yt1;
-    myCollection += yt2;
-    cout << myCollection;
-    cout << endl;
+    // MyCollection myCollection;
+    // myCollection += yt1;
+    // myCollection += yt2;
+    // cout << myCollection;
+    // cout << endl;
 
-    myCollection -= yt2;
-    cout << myCollection;
+    // myCollection -= yt2;
+    // cout << myCollection;
 
     return 0;
 }
