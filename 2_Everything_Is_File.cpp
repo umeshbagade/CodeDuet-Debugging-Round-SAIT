@@ -1,8 +1,10 @@
-CodeDuet 2k23 Round 3
+// CodeDuet 2k23 Round 3
 
 #include<iostream>
 #include<fstream>
 #include<string>
+
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -28,8 +30,8 @@ File2 contains :
 
 int main()
 {
-    ifstream in;
-    ofstream out;
+     ifstream in;
+     ofstream out;
 
      out.open("file1.txt"); // Write data in file1 
      out<<"Mumbai is finicial capital of India";
@@ -47,17 +49,24 @@ int main()
     string st;//Create a output string 
 
     
-    while(in.eof()){  //Iterate in file1. Copy data from file1 to file3
-        in>>st;
-        out<<st;
+    while(!in.eof()){  //Iterate in file1. Copy data from file1 to file3
+     
+         getline(in, st);
+         out<<st;
+
+
     }
+    in.close();
 
 
      in.open("file2.txt"); //Read input file2
+      st="";
 
-  while(in.eof()){ //Iterate in file2. Copy data from file2 to file3
-        in>>st;
-        out<<st;
+      out<<"\n";
+  while(!in.eof()){ //Iterate in file2. Copy data from file2 to file3
+      
+       getline(in, st);
+       out<<st;
     }
 
 
