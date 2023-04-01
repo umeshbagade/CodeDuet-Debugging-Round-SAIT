@@ -16,7 +16,7 @@ public:
 class Stack
 {
 public:
-    Node *top;
+    Node *top = NULL;
     void display();
     void push();
     void pop();
@@ -32,7 +32,7 @@ void Stack ::display()
     }
     else
     {
-        Node *p;
+        Node *p = top;
 
         while (p)
         {
@@ -45,7 +45,7 @@ void Stack ::display()
 // Push values in the stack
 void Stack ::push()
 {
-    Node *p;
+    Node *p = new Node();
     if (top)
     {
         cout << "Enter data: ";
@@ -55,7 +55,12 @@ void Stack ::push()
         display();
     }
     else
-        cout << "Stack Overflow\n";
+    {
+            // cout << "Stack Overflow\n";
+        cout << "Enter data: ";
+        cin >> p->data;
+        top = p;
+    }
 }
 
 // Pop values in the stack
@@ -101,17 +106,17 @@ int main()
         cin >> choice;
         switch (choice)
         {
-        case 1:
+        case '1':
             s1.display();
             break;
-        case 2:
+        case '2':
             s1.push();
             break;
-        case 3:
-            s1.peek();
-            break;
-        case 4:
+        case '3':
             s1.pop();
+            break;
+        case '4':
+            s1.peek();
             break;
         default:
             return 0;
